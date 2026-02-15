@@ -3,15 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from platformdirs import user_desktop_dir
 
-app = Flask(__name__)
+server = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'mysecretkey'
+server.config['SECRET_KEY'] = 'mysecretkey'
 basedir = user_desktop_dir() # /Users/nickmarkoulis/Library/Application Support
-app.config['SQLALCHEMY_DATABASE_URI'] = user_desktop_dir()
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+server.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + user_desktop_dir()
+server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
-Migrate(app, db)
+db = SQLAlchemy(server)
+Migrate(server, db)
 
 
 # from myproject.journal_entry.views import 
