@@ -2,12 +2,13 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from platformdirs import user_desktop_dir
+from pathlib import Path
 
 server = Flask(__name__)
 
 server.config['SECRET_KEY'] = 'mysecretkey'
 basedir = user_desktop_dir() # /Users/nickmarkoulis/Library/Application Support
-server.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + user_desktop_dir()
+server.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + user_desktop_dir() + 'data.sqlite'
 server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(server)

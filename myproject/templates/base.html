@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    {% block title %}<title>{{ title or "Make an Entry" }}</title>{% endblock %}
+</head>
+<body>
+    <header class="header-navbar">
+        <div>
+            <a href="{{ url_for('journal_entry.render_journal_entries') }}">Personal Finance</a>
+        </div>
+        <div>
+            <h2>{{ title or "Make an Entry" }}</h2>
+        </div>
+    </header>
+    <div class="under-header-section">
+        <nav class="side-navbar">
+            <div class="navbar-upper">
+                <a href="{{ url_for('journal_entry.render_journal_entries') }}">Make an Entry</a>
+                <form action="{{ url_for('financial_standing.render_financial_standing') }}">
+                    <input type="submit" value="Go to Financial Standing">
+                </form>
+
+                <form action="{{ url_for('make_a_budget.render_make_a_budget') }}">
+                    <input type="submit" value="Go to Make a Budget">
+                </form>
+
+                <form action="{{ url_for('edit_templates.render_edit_templates') }}">
+                    <input type="submit" value="Go to Edit Templates">
+                </form>
+            </div>
+            <div class="navbar-lower">
+                <form action="{{ url_for('settings.render_settings') }}">
+                    <input type="submit" value="Go to Settings">
+                </form>
+            </div>
+        </nav>
+        <div class="main-user-interface">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

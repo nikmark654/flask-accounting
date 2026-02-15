@@ -1,0 +1,59 @@
+html{
+    font-family: jura;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+}
+
+/* Header Styling */
+
+.header-navbar{
+    background-color: #222326;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    min-height: 4.5vh;
+    display: flex;
+}
+
+.header-navbar > div{
+    min-width: 17vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-navbar > div > a{
+    font-size: large;
+    text-decoration: none;
+    color: white;
+}
+
+.header-navbar > div + div{
+    width: 100%;
+    text-align: center;
+}
+
+.under-header-section{
+    display: flex;
+    height: 100%;
+}
+
+/* Side Navbar styling */
+
+.side-navbar{
+    background-color: #2C3B59;
+    min-width: 17vw;
+}
+
+/* main-user-interface */
+
+.main-user-interface{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}

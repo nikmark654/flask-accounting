@@ -7,6 +7,6 @@ journal_entry_blueprint = Blueprint(
     template_folder='templates/journal_entry'
     )
 
-@journal_entry_blueprint.route('/journal_entry', methods = ['GET', 'POST'])
+@journal_entry_blueprint.route('/', methods = ['GET', 'POST'])
 def render_journal_entries():
     return render_template('journal_entry.html')
