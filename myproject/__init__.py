@@ -14,10 +14,14 @@ db = SQLAlchemy(server)
 Migrate(server, db)
 
 
-# from myproject.journal_entry.views import 
-# from myproject.financial_standing.views import 
-# from myproject.make_a_budget.views import
-# from myproject.settings.views import
+from myproject.journal_entry.views import journal_entry_blueprint
+from myproject.financial_standing.views import financial_standing_blueprint
+from myproject.make_a_budget.views import make_a_budget_blueprint
+from myproject.edit_templates.views import edit_templates_blueprint
+from myproject.settings.views import settings_blueprint
 
-# app.register_blueprint(owners_blueprint,url_prefix="/owners")
-# app.register_blueprint(puppies_blueprint,url_prefix='/puppies')
+server.register_blueprint(journal_entry_blueprint, url_prefix="")
+server.register_blueprint(financial_standing_blueprint, url_prefix="")
+server.register_blueprint(make_a_budget_blueprint, url_prefix="")
+server.register_blueprint(edit_templates_blueprint, url_prefix="")
+server.register_blueprint(settings_blueprint, url_prefix="")

@@ -1,5 +1,0 @@
-It is the landing page. In addition to the navigation segments, we have:
-
-Basic visuals that display current situation.
-Some basic log data.
-Extensive navigation.
