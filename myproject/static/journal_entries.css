@@ -1,0 +1,47 @@
+.content-header{
+    padding-left: 5.2vw;
+    padding-right: 5.2vw;
+}
+
+.content-header-container{
+    padding-top: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-value-frame{
+    border-radius: 15px;
+    border: 1px green solid;
+    min-height: 10vh;
+    width: 12.6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    vertical-align: bottom;
+}
+
+.block-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-title{
+    padding-bottom: 1.4vh;
+}
+
+.block-value-container{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.block-green-line{
+    height: 1px;
+    width: 80%;
+    background-color: blue;
+    margin-bottom: 12px;
+    align-self: center;
+}

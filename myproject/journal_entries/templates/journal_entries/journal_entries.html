@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='journal_entries.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="content-header">
+        <div class="content-header-container">
+            <div class="block-body">
+                <div class="block-title">Cash Balance</div>
+                <div class="block-value-frame">
+                    <div class="block-value-container">
+                        <div class="block-value">1,000.00</div>
+                    </div>
+                    <div class="block-green-line"></div>
+                </div>
+            </div>
+            <div class="block-body">
+                <div class="block-title">Bank Balance</div>
+                <div class="block-value-frame">
+                    <div class="block-value-container">
+                        <div class="block-value">1,000.00</div>
+                    </div>
+                    <div class="block-green-line"></div>
+                </div>
+            </div>
+            <div class="block-body">
+                <div class="block-title">Trade Payables</div>
+                <div class="block-value-frame">
+                    <div class="block-value-container">
+                        <div class="block-value">1,000.00</div>
+                    </div>
+                    <div class="block-green-line"></div>
+                </div>
+            </div>
+            <div class="block-body">
+                <div class="block-title">Other Liabilities</div>
+                <div class="block-value-frame">
+                    <div class="block-value-container">
+                        <div class="block-value">1,000.00</div>
+                    </div>
+                    <div class="block-green-line"></div>
+                </div>
+            </div>
+            <div class="block-body">
+                <div class="block-title">Credit Line Residual</div>
+                <div class="block-value-frame">
+                    <div class="block-value-container">
+                        <div class="block-value">1,000.00</div>
+                    </div>
+                    <div class="block-green-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+{% endblock %}

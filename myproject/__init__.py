@@ -15,13 +15,13 @@ db = SQLAlchemy(server)
 Migrate(server, db)
 
 # These need to be imported after the server declarations.
-from myproject.journal_entry.views import journal_entry_blueprint
+from myproject.journal_entries.views import journal_entries_blueprint
 from myproject.financial_standing.views import financial_standing_blueprint
 from myproject.make_a_budget.views import make_a_budget_blueprint
 from myproject.edit_templates.views import edit_templates_blueprint
 from myproject.settings.views import settings_blueprint
 
-server.register_blueprint(journal_entry_blueprint)
+server.register_blueprint(journal_entries_blueprint)
 server.register_blueprint(financial_standing_blueprint)
 server.register_blueprint(make_a_budget_blueprint)
 server.register_blueprint(edit_templates_blueprint)

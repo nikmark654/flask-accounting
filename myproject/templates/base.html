@@ -8,21 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     {% block title %}<title>{{ title or "Make an Entry" }}</title>{% endblock %}
+    {% block stylesheet %} {% endblock %}
 </head>
 <body>
     <header class="header-navbar">
         <div>
-            <a href="{{ url_for('journal_entry.render_journal_entries') }}">Personal Finance</a>
+            <a href="{{ url_for('journal_entries.render_journal_entries') }}">Personal Finance</a>
         </div>
         <div>
-            <h2>{{ title or "Make an Entry" }}</h2>
+            <h2>{{ title or "Journal Entries" }}</h2>
         </div>
     </header>
     <div class="under-header-section">
         <nav class="side-navbar">
             <div class="navbar-upper">
                 <div class="navbar-upper-options-content">
-                    <a href="{{ url_for('journal_entry.render_journal_entries') }}" class="navbar-options">Make an Entry</a>
+                    <a href="{{ url_for('journal_entries.render_journal_entries') }}" class="navbar-options">Make an Entry</a>
                     <a href="{{ url_for('financial_standing.render_financial_standing') }}" class="navbar-options">Financial Standing</a>
                     <a href="{{ url_for('make_a_budget.render_make_a_budget') }}" class="navbar-options">Make a Budget</a>
                     <a href="{{ url_for('edit_templates.render_edit_templates') }}" class="navbar-options">Edit Templates</a>
