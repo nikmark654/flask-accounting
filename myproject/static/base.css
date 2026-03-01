@@ -31,6 +31,11 @@ body{
     font-size: large;
     text-decoration: none;
     color: white;
+    font-size: 20px;
+}
+
+.header-navbar > div > h2{
+    font-size: 17px;
 }
 
 .header-navbar > div + div{
@@ -48,6 +53,42 @@ body{
 .side-navbar{
     background-color: #2C3B59;
     min-width: 17vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 4vh;
+}
+
+.navbar-upper{
+    background-color: #446661;
+    min-width: 12.3vw;
+    min-height: 28vh;
+    max-height: 28vh;
+    border-radius: 15px;
+}
+
+.navbar-upper-options-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+.navbar-options{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-lower-settings{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 /* main-user-interface */

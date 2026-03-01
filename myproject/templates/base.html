@@ -21,23 +21,15 @@
     <div class="under-header-section">
         <nav class="side-navbar">
             <div class="navbar-upper">
-                <a href="{{ url_for('journal_entry.render_journal_entries') }}">Make an Entry</a>
-                <form action="{{ url_for('financial_standing.render_financial_standing') }}">
-                    <input type="submit" value="Go to Financial Standing">
-                </form>
-
-                <form action="{{ url_for('make_a_budget.render_make_a_budget') }}">
-                    <input type="submit" value="Go to Make a Budget">
-                </form>
-
-                <form action="{{ url_for('edit_templates.render_edit_templates') }}">
-                    <input type="submit" value="Go to Edit Templates">
-                </form>
+                <div class="navbar-upper-options-content">
+                    <a href="{{ url_for('journal_entry.render_journal_entries') }}" class="navbar-options">Make an Entry</a>
+                    <a href="{{ url_for('financial_standing.render_financial_standing') }}" class="navbar-options">Financial Standing</a>
+                    <a href="{{ url_for('make_a_budget.render_make_a_budget') }}" class="navbar-options">Make a Budget</a>
+                    <a href="{{ url_for('edit_templates.render_edit_templates') }}" class="navbar-options">Edit Templates</a>
+                </div>
             </div>
             <div class="navbar-lower">
-                <form action="{{ url_for('settings.render_settings') }}">
-                    <input type="submit" value="Go to Settings">
-                </form>
+                <a href="{{ url_for('settings.render_settings') }}" class="navbar-lower-settings">Settings</a>
             </div>
         </nav>
         <div class="main-user-interface">
